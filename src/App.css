@@ -1,0 +1,84 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #007BFF;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+}
+.no-decoration{
+  text-decoration: none !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+
+/* Улучшение стиля кнопок */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Перенос стилей кнопок в глобальный файл */
+.item-form button, .item button, .item-form-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.item-form button:hover, .item button:hover, .item-form-button:hover {
+  background-color: #0056b3;
+}
+.item_button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,97 @@
+/* Общие стили для всех элементов */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.item-list-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Стили для компонента Item */
+.item {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.item-title {
+  margin: 0;
+  color: #333;
+  font-size: 1.8em;
+}
+
+.item-description {
+  margin: 10px 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.item-bid {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #444;
+}
+
+.item-bid span {
+  color: #000;
+}
+
+.item-time {
+  color: #888;
+}
+
+.auction-ended-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.item-button-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.item-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.item-button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для списка Items */
+.item-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-list-element {
+  margin-bottom: 20px;
+  padding: 10px;
+}
