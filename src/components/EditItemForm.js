@@ -44,8 +44,9 @@ const EditItemForm = ({ fetchItems, currentItem, setCurrentItem, setIsModalOpen 
 
   const checkIfEditable = (endBidTime) => {
     const currentTime = new Date();
+    const newTime = new Date(currentTime.getTime() + 7 * 60 * 60 * 1000)
     const endBidDate = new Date(endBidTime);
-    setIsEditable(currentTime <= endBidDate);
+    setIsEditable(newTime <= endBidDate);
   };
 
   return (
