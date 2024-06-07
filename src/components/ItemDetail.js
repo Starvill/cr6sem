@@ -9,6 +9,7 @@ import './Item.css';
 const ItemDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  
   const [item, setItem] = useState(null);
   const [currentBid, setCurrentBid] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -120,10 +121,8 @@ const ItemDetail = () => {
   };
 
   const currentTime = new Date();
-  console.log(currentTime);
   const newTime = new Date(currentTime.getTime() + 7 * 60 * 60 * 1000)
   const endBidTime = new Date(item.endBidTime);
-  console.log(endBidTime);
   const canEdit = newTime <= endBidTime;
   const imageUrl = `${process.env.REACT_APP_API_URL}/static/images/${item.imagePath}`;
 
@@ -140,6 +139,7 @@ const ItemDetail = () => {
           <p>Конец аукциона: {formatDate(item.endBidTime)}</p>
         </div>
       </div>
+      
       <div className="item-detail-buttons">
         {(isAdmin || userId === item.user_id) && (
           <button className='item_button' onClick={handleDelete}>Удалить</button>
@@ -148,7 +148,7 @@ const ItemDetail = () => {
           <button className='item_button' onClick={handleEdit}>Изменить</button>
         )}
       </div>
-      {canEdit && (
+      {canEdit && token &&(
         <div className="update-bid">
           <button className="bid-button" onClick={decreaseBid}>-</button>
           <input
