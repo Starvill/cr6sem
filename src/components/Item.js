@@ -13,7 +13,7 @@ const Item = ({ item }) => {
   const canEdit = currentTime <= endBidTime;
 
   const imageUrl = `${process.env.REACT_APP_API_URL}/static/images/${item.imagePath}`;
-
+  console.log(item.startBidTime);
   return (
     <div className="item">
       <img src={imageUrl} alt={item.title} className="item-image" />
