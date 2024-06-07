@@ -134,9 +134,10 @@ const ItemDetail = () => {
         <img src={imageUrl} alt={item.title} className="item-detail-image" />
         <div className="item-detail-info">
           <p>{item.description}</p>
-          <p>Current Bid: <span style={{ fontWeight: 'bold' }}>${item.currentBid}</span></p>
-          <p>Start Bid Time: {formatDate(item.startBidTime)}</p>
-          <p>End Bid Time: {formatDate(item.endBidTime)}</p>
+          <p>Ставка: <span style={{ fontWeight: 'bold' }}>${item.currentBid}</span></p>
+          <p>Шаг аукциона{item.bidStep}</p>
+          <p>Начало аукциона: {formatDate(item.startBidTime)}</p>
+          <p>Конец аукциона: {formatDate(item.endBidTime)}</p>
         </div>
       </div>
       <div className="item-detail-buttons">
