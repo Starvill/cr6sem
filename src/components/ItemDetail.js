@@ -121,7 +121,7 @@ const ItemDetail = () => {
   };
 
   const currentTime = new Date();
-  const newTime = new Date(currentTime.getTime() + 7 * 60 * 60 * 1000)
+  const newTime = new Date(currentTime.getTime())
   const endBidTime = new Date(item.endBidTime);
   const canEdit = newTime <= endBidTime;
   const imageUrl = `${process.env.REACT_APP_API_URL}/static/images/${item.imagePath}`;
